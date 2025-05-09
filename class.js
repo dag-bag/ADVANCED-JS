@@ -42,5 +42,9 @@
 // };
 // const you = new SuperHuman();
 // console.log(you.fight());
-
-console.dir(Number);
+Object.setPrototypeOf.name = "virender";
+function name() {
+  console.log(this.name);
+}
+name();
+console.dir(name);
