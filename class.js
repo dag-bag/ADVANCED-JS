@@ -42,9 +42,30 @@
 // };
 // const you = new SuperHuman();
 // console.log(you.fight());
-Object.setPrototypeOf.name = "virender";
-function name() {
-  console.log(this.name);
-}
-name();
-console.dir(name);
+// Object.setPrototypeOf.name = "virender";
+// function name() {
+//   console.log(this.name);
+// }
+// name();
+// console.dir(name);
+
+const xhr = new XMLHttpRequest();
+
+// Fake JSON API
+const url = "https://jsonplaceholder.typicode.com/posts/1";
+
+xhr.open("GET", url, true);
+
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4) {
+    // 4 = DONE
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      console.log("Fake JSON data:", response);
+    } else {
+      console.error("Failed to fetch data");
+    }
+  }
+};
+
+xhr.send();
