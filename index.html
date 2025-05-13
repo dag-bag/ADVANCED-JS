@@ -9,9 +9,38 @@
     body {
       background-color: black;
     }
+
+    .orange {
+      background-color: orange;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .red {
+      background-color: red;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .blue {
+      background-color: blue;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
   <body>
-    <input type="text" placeholder="Type Here" on />
+    <div class="orange" onclick="Outer(event)">
+      <div class="red" onclick="Mid(event)">
+        <div class="blue" onclick="Inner(event)"></div>
+      </div>
+    </div>
   </body>
   <script src="class.js"></script>
 </html>
