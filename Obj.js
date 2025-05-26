@@ -8,7 +8,7 @@
 // console.log(obj);
 
 const set = new Set([1, 2, 3]);
-
+Object.getPrototypeOf(set);
 for (const value in set) {
   console.log(value); // 1, 2, 3
 }
